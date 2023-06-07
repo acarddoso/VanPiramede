@@ -40,6 +40,10 @@ public abstract class ElementoBasico extends JButton {
         this.setIcon(resize(this.imagem, 50, 40));
     }
 
+    public void trocaParaFundo(){
+        tabuleiro.insereFundoEmLocal(lin, col);
+    } 
+
     public String getId() {
         return id;
     }
@@ -88,6 +92,12 @@ public abstract class ElementoBasico extends JButton {
                 destHeight, Image.SCALE_SMOOTH));
     }
 
+    public String toString() {
+        return String.format("%s (%d,%d)\n", id, lin, col);
+    }
+    
 
 }
+
+
 
