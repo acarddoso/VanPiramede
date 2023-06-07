@@ -77,6 +77,12 @@ public class Tabuleiro extends JPanel {
         return elementoAnterior;
     }
 
+    public void insereFundoEmLocal(int lin, int col) {
+        celulas[lin][col] = new Fundo("Fundo",lin,col,this);
+    }
+
+
+
     public void atualizaVisualizacao() {
         // Atualiza o conteúdo do JPanel (ver algo melhor)
         this.removeAll(); // erase everything from your JPanel
