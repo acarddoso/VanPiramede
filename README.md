@@ -1,20 +1,18 @@
-# VanPiramede
+## Getting Started
 
+Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
 
-Trabalho Final POO
+## Folder Structure
 
-Faremos um jogo de tabuleiro de tamanho pelo menos 10x10, onde o jogador controlará um personagem que deverá chegar a um ponto final na fase, mas para isso deverá passar por inimigos e obstáculos, inimigos esses que tirarão vida do personagem do jogador e para isso o jogador deverá achar itens de cura para enfrentar mais inimigos, o jogador também encontrará paredes quebráveis que serão necessárias utilizar uma ferramenta que será encontrada pelo jogador abrindo mais caminhos para explorar. No final o jogador encontrará um inimigo final que ele não deverá lutar e sim resolver uma charada para completar o jogo.
+The workspace contains two folders by default, where:
 
-Elementos:
+- `src`: the folder to maintain sources
+- `lib`: the folder to maintain dependencies
 
--Personagem controlável pelo jogador, com sistema de vida.
+Meanwhile, the compiled output files will be generated in the `bin` folder by default.
 
--Inimigo comum que bloqueará a passagem do jogador, com sistema de vida.
+> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
 
--Item de cura, que recupera a vida do jogador.
+## Dependency Management
 
--Obstáculo, uma parede quebrável que precisará de uma ferramenta para quebra-la.
-
--Ferramenta, um item único que será encontrado pelo jogador para quebrar o elemento obstáculo. 
-
--Inimigo Final, ele realizará uma charada para o jogador que deverá ser resolvida para vencer o jogo, sem sistema vida.
+The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
