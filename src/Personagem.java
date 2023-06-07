@@ -1,5 +1,4 @@
 
-
 public class Personagem extends ElementoBasico {
     private ElementoBasico anterior;
     private static int vida = 50;
@@ -12,8 +11,15 @@ public class Personagem extends ElementoBasico {
         this.anterior = anterior;
     }
 
-    public void dano(){
+
+
+    public boolean dano(){
+        if(vida>20){
         vida = vida-20;
+        return true;
+        }
+        else {vida = 0; 
+        return false;}
     }
 
     public int getVida(){
@@ -90,6 +96,7 @@ public class Personagem extends ElementoBasico {
 
     @Override
     public void acao(ElementoBasico outro) {
+        
         throw new UnsupportedOperationException("Unimplemented method 'acao'");
     }
 
