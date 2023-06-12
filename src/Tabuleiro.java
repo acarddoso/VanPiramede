@@ -29,6 +29,7 @@ public class Tabuleiro extends JPanel {
         }
     }
 
+
     public static ImageIcon createImageIcon(String path) {
         java.net.URL imgURL = App.class.getResource("imagens/"+path);
         
@@ -128,8 +129,8 @@ public class Tabuleiro extends JPanel {
            case ' ': return new Fundo("Fundo",lin,col,this);
            case '-': return new Eca("Dica",lin,col,this);
            case '?': return new Inimigo("Pista",r.nextInt(15), lin,col,this, principal);
-           case '^': return new TBD("Buraco","hole.jpg",lin,col,this);
-           case '+': return new TBD("Portal","portal.png",lin,col,this);     
+           case '^': return new Cura("Cura",r.nextInt(15), lin,col,this, principal);
+           case '+': return new ParedeQuebravel("Parede",lin,col,this, principal);     
            default: throw new IllegalArgumentException("Personagem invalido: "+elem);
         }
 
