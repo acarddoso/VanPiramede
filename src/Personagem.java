@@ -1,6 +1,6 @@
-
 public class Personagem extends ElementoBasico {
     private ElementoBasico anterior;
+    private boolean machado = false;
     private static int vida = 50;
 
     public Personagem(String id, String iconPath, int linInicial, int colInicial, Tabuleiro tabuleiro) {
@@ -9,6 +9,14 @@ public class Personagem extends ElementoBasico {
 
     public void setAnterior(ElementoBasico anterior){
         this.anterior = anterior;
+    }
+
+    public boolean quebrar(){
+        if(machado == true){
+            return true;
+        }
+        else return false;
+
     }
 
 
@@ -20,6 +28,12 @@ public class Personagem extends ElementoBasico {
         }
         else {vida = 0; 
         return false;}
+    }
+
+    public void cura(){
+        if(vida<40){
+        vida = vida+10;}
+        else vida = 50;
     }
 
     public int getVida(){
