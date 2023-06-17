@@ -11,9 +11,10 @@ public class Cura extends ElementoBasico {
 
     @Override
     public void acao(ElementoBasico outro) {
-        System.out.println(this.toString());
+        
         heroi.cura();
         trocaParaFundo();
+        System.out.println(this.toString());
         
     
     
