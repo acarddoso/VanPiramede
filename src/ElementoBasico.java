@@ -40,6 +40,11 @@ public abstract class ElementoBasico extends JButton {
         this.setIcon(resize(this.imagem, 50, 40));
     }
 
+    public void danificarparede(){
+        imagem = Tabuleiro.createImageIcon("mud.png");
+        this.setIcon(resize(imagem, 50, 40));
+    }
+
     public void trocaParaFundo(){
         tabuleiro.insereFundoEmLocal(lin, col);
     } 
