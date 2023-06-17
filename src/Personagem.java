@@ -19,6 +19,11 @@ public class Personagem extends ElementoBasico {
 
     }
 
+    public void pegaMachado(){
+        machado = true;
+    }
+
+
 
 
     public boolean dano(){
