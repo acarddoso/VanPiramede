@@ -15,6 +15,8 @@ public class App extends JFrame implements ActionListener{
     private Tabuleiro tabuleiro;
     private Personagem personagem;
     private JPanel botoesDirecao = new JPanel(new FlowLayout());
+    private JPanel vidaHUD = new JPanel(new FlowLayout());
+    JLabel vida = new JLabel("Vida :"+50);
 
     public App() {
         super();
@@ -40,12 +42,15 @@ public class App extends JFrame implements ActionListener{
 
         
         // Insere os personagens no tabuleiro
+        JLabel instrucoes = new JLabel("Inimigos tiram 20 de vida, curas recuperam 10 de vida");
+
         tabuleiro.loadLevel(1);
         personagem = tabuleiro.getPrincipal();
         personagem.setAnterior(personagem.getAnterior());
+        vidaHUD.add(instrucoes);
+        vidaHUD.add(vida);
 
-        JLabel vida = new JLabel("Vida :"+personagem.getVida());
-        botoesDirecao.add(vida);
+        painelGeral.add(vidaHUD);
         painelGeral.add(botoesDirecao);
         painelGeral.add(tabuleiro);
         
@@ -70,8 +75,9 @@ public class App extends JFrame implements ActionListener{
         this.pack();
         this.setVisible(true);
         tabuleiro.atualizaVisualizacao();
+
+
     }
-    
     @Override
     public void actionPerformed(ActionEvent arg0) {
         JButton but = (JButton)arg0.getSource();
@@ -87,6 +93,10 @@ public class App extends JFrame implements ActionListener{
         if (but.getText().equals("Abaixo")){
             personagem.moveBaixo();
         }
+        
+        
+        vida.setText(String.valueOf("Vida:" + personagem.getVida()));
+
         tabuleiro.atualizaVisualizacao();
         botoesDirecao.revalidate();
         botoesDirecao.repaint();
