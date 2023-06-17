@@ -78,6 +78,8 @@ public class Tabuleiro extends JPanel {
         return elementoAnterior;
     }
 
+
+
     public void insereFundoEmLocal(int lin, int col) {
         celulas[lin][col] = new Fundo("Fundo",lin,col,this);
     }
@@ -128,8 +130,10 @@ public class Tabuleiro extends JPanel {
                     }
            case ' ': return new Fundo("Fundo",lin,col,this);
            case '-': return new Eca("Dica",lin,col,this);
-           case '?': return new Inimigo("Pista",r.nextInt(15), lin,col,this, principal);
+           case '?': return new Inimigo("Inimigo",r.nextInt(15), lin,col,this, principal);
            case '^': return new Cura("Cura",r.nextInt(15), lin,col,this, principal);
+           case '%': return new Machado("Machado",r.nextInt(15), lin,col,this, principal);
+           case '@': return new Esfinge("Esfinge",r.nextInt(15), lin,col,this);
            case '+': return new ParedeQuebravel("Parede",lin,col,this, principal);     
            default: throw new IllegalArgumentException("Personagem invalido: "+elem);
         }
