@@ -5,18 +5,19 @@ public class Inimigo extends ElementoBasico {
 
 
     public Inimigo(String id, int nroPista, int linInicial, int colInicial, Tabuleiro tabuleiro, Personagem combate) {
-        super(id, "hint.jpg", linInicial, colInicial, tabuleiro);
+        super(id, "inimigo.jpg", linInicial, colInicial, tabuleiro);
         this.combate = combate;
     }
 
     @Override
     public void acao(ElementoBasico outro) {
-        System.out.println(this.toString());
+    
         if(combate.dano()==true){
             trocaParaFundo();
         }
-        else {JOptionPane.showMessageDialog(getRootPane(), "Morreu troxa");
+        else {JOptionPane.showMessageDialog(getRootPane(), "Morreu ");
         System.exit(0);}
+         System.out.println(this.toString());
     
     
        // throw new UnsupportedOperationException("Unimplemented method 'acao'");
@@ -27,4 +28,5 @@ public class Inimigo extends ElementoBasico {
     }
     
 }
+
 
