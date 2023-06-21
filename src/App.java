@@ -2,6 +2,7 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
@@ -75,6 +76,8 @@ public class App extends JFrame implements ActionListener{
         this.pack();
         this.setVisible(true);
         tabuleiro.atualizaVisualizacao();
+        JOptionPane.showMessageDialog(getRootPane(), "Bem vindo ao VanPiramede!");
+        JOptionPane.showMessageDialog(getRootPane(), "Seu objetivo é explorar a piramede e encontrar o tesoura que ela esconde, tome cuidado com os inimigos!");
 
 
     }
