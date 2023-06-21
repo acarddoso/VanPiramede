@@ -3,7 +3,7 @@ public class ParedeQuebravel extends ElementoBasico {
     boolean danificado = false; 
 
     public ParedeQuebravel(String id, int linInicial, int colInicial, Tabuleiro tabuleiro, Personagem parede) {
-        super(id, "portal.png", linInicial, colInicial, tabuleiro);
+        super(id, "paredequebravel.png", linInicial, colInicial, tabuleiro);
         this.parede = parede;
     }
 
