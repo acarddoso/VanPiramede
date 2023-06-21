@@ -5,7 +5,7 @@ public class Cura extends ElementoBasico {
 
 
     public Cura(String id, int nroPista, int linInicial, int colInicial, Tabuleiro tabuleiro, Personagem heroi) {
-        super(id, "carne.png", linInicial, colInicial, tabuleiro);
+        super(id, "cura.png", linInicial, colInicial, tabuleiro);
         this.heroi = heroi;
     }
 
